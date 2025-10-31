@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hour determination</title>
+  </head>
+  <body>
+    
+
+<script>
+  let hour = 15;
+let hourDay = '';
+let name = 'Pamela';
+
+  if (hour >=6 && hour <= 12){
+  hourDay = `Good morning ${name}`;
+  } else if(hour >=13 && hour <= 17){
+ hourDay = `Good afternoon ${name}`;  
+}else{
+ hourDay = `Good night ${name}`;
+}
+console.log(hourDay);
+
+
+{{/*  Amusement Exercise  */}}
+let age = 6;
+const isholiday = false;
+
+
+// && has a higher priority than || so for
+      // this to work correctly, we need to add
+      // brackets () around the || check to make
+      // sure that it gets done first.
+
+if ((age<=6 || age >=65) && !isholiday){
+console.log('Discount');
+}else{
+console.log('No discount');
+}
+
+
+
+{{/*  Coin-flip Game  */}}
+const randonNumber = Math.random();
+let result;
+const guess ='heads';
+
+
+if (randonNumber< 0.5){
+  result='heads';
+}else{
+  result='tails';
+}
+console.log(result);
+
+
+if (guess === result){
+console.log('You win');
+}else{
+console.log('You lose');
+}
+
+</script>
+  </body>
+</html>
