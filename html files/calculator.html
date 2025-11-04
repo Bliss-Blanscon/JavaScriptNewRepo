@@ -1,155 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Lesson 5-Varibles</title>
-
-    <style>
-      button{
-        border-radius: 200px;
-        border: none;
-        background-color: rgb(102, 118, 105);
-        height: 60px;
-        width: 60px;
-        font-size: 23px;
-        cursor: pointer;
-
-      }
-    </style>
-  </head>
-
-
+<html>
+  <head></head>
   <body>
-<label id="printme"></label>
+    <p>
+      <button onclick="
+        updateCalculation('1');
+      ">1</button>
 
-<br>
-<button onclick="
-calculation += 1;
-console.log(calculation)
-">1</button>
+      <button onclick="
+        updateCalculation('2');
+      ">2</button>
 
+      <button onclick="
+        updateCalculation('3');
+      ">3</button>
 
-<button  onclick="
-calculation += 2;
-console.log(calculation)
-">2</button>
+      <button onclick="
+        updateCalculation(' + ');
+      ">+</button>
+    </p>
 
+    <p>
+      <button onclick="
+        updateCalculation('4');
+      ">4</button>
 
-<button  onclick="
-calculation += 3;
-console.log(calculation)
-">3</button> 
+      <button onclick="
+        updateCalculation('5');
+      ">5</button>
 
+      <button onclick="
+        updateCalculation('6');
+      ">6</button>
 
-<button  onclick="
-calculation += '+';
-console.log(calculation)
-">+</button>
+      <button onclick="
+        updateCalculation(' - ');
+      ">-</button>
+    </p>
 
+    <p>
+      <button onclick="
+        updateCalculation('7');
+      ">7</button>
 
-<br> <br>
-<button  onclick="
-calculation += 4;
-console.log(calculation)
-">4</button>
+      <button onclick="
+        updateCalculation('8');
+      ">8</button>
 
+      <button onclick="
+        updateCalculation('9');
+      ">9</button>
 
-<button  onclick="
-calculation += 5;
-console.log(calculation)
-">5</button>
+      <button onclick="
+        updateCalculation(' * ');
+      ">*</button>
+    </p>
 
+    <p>
+      <button onclick="
+        updateCalculation('0');
+      ">0</button>
 
-<button  onclick="
-calculation += 6;
-console.log(calculation)
-">6</button>
+      <button onclick="
+        updateCalculation('.');
+      ">.</button>
 
+      <button onclick="
+        // Note: eval() takes a string and runs it as code.
+        // Avoid using eval() in real world projects since
+        // it can potentially be given harmful code to run.
+        // Only use eval() for learning purposes.
+        calculation = eval(calculation);
+        console.log(calculation);
+      ">=</button>
 
-<button  onclick="
-calculation += '-';
-console.log(calculation)
-">-</button>
+      <button onclick="
+        updateCalculation(' / ');
+      ">/</button>
+    </p>
 
-
-<br> <br>
-<button  onclick="
-calculation += 7;
-console.log(calculation)
-">7</button>
-
-
-<button  onclick="
-calculation += 8;
-console.log(calculation)
-">8</button>
-
-
-<button  onclick="
-calculation += 9;
-console.log(calculation)
-">9</button>
-
-
-<button  onclick="
-calculation += `*`;
-console.log(calculation)
-">*</button>
-
-
- <br> <br>
-<button  onclick="
-calculation += 0;
-console.log(calculation)
-">0</button>
-
-
-<button  onclick="
-calculation += `.`;
-console.log(calculation)
-">.</button> 
-
-
-<button  onclick="
-calculation += '/';
-console.log(calculation)
-">/</button>
-
-
-<button   onclick="
-
-console.log(eval(calculation))
-">=</button>
-
-<br> <br>
-<button  onclick="
-calculation = 0;
-console.log(calculation)
-">clear</button>
-
-
-
-
-
-
-
-
-
-
-
-
+    <p>
+      <button onclick="
+        calculation = '';
+        console.log(calculation);
+      ">Clear</button>
+    </p>
 
     <script>
-      {{/*  const coffee= 5;
-      const bagels= 3;
-      const soup = 9;
-      let cost = ((coffee*1)+(bagels*2)+(soup*1))/0.1;
+      let calculation = '';
 
-      console.log(`Cost of food: $${cost}`)
-      let name ="Pamela";
-      console.log(`My name is: ${name}`);  */}}
-let calculation ="";
-
+      function updateCalculation(value) {
+        calculation += value;
+        console.log(calculation);
+      }
     </script>
   </body>
 </html>
