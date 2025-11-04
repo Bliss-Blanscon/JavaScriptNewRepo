@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Exercise on functions</title>
+  </head>
+  <body>
+    
+
+    <script>
+      {{/*  Exercise one  */}}
+      function welcomeMessage(){
+      console.log('welcome to javaScript');
+      }
+    welcomeMessage();
+
+          {{/*  Exercise two  */}}
+
+    function add(a,b){
+    return a+b;
+    }
+
+    console.log(add(5,9));
+
+
+          {{/*  Exercise three  */}}
+
+    function lastDigit(n){
+    return n % 10;
+    }
+
+    console.log(lastDigit(59));
+
+
+          {{/*  Exercise four  */}}
+    
+    function isAdult(age){
+    if (age>= 18){
+    return true;
+    } else{
+    return false;
+    }
+    }
+
+    console.log(isAdult(5));
+
+
+          {{/*  Exercise five  */}}
+    function max(a,b){
+    if (a===b){
+    return `A is the same than B`;
+    }else if (a>b){
+    return `A is bigger than B`;
+    }else{
+    return `B is bigger than A`;
+    }
+    }
+console.log(max(5,5));
+console.log(max(5,6));
+console.log(max(10,5));
+
+
+          {{/*  Exercise six  */}}
+function isEven(num){
+if (num % 2 == 0){
+return `Even`;
+}else{
+return `Odd`;
+}
+}
+
+console.log(isEven(3));
+console.log(isEven(56));
+console.log(isEven(65));
+console.log(isEven(50));
+
+
+
+
+    </script>
+  </body>
+</html>
